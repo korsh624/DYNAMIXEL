@@ -27,6 +27,7 @@ class Robot(object):
         self.motors = {
             'j1': [1, 'joint'],
             'j2': [13, 'joint'],
+            'j3': [16, 'joint'],
         }
 
     def connect(self, dxl_port, ard_port=None):
