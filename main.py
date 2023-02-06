@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import robot
+from robot1 import date_list
 import time
 r = robot.Robot()
 r.connect('COM6', None)
@@ -7,7 +8,7 @@ try:
     r.init()
     time.sleep(1)
     while True:
-        val=input('val= ').split(' ')
+        val=date_list
         if val[0]=='stop':
             break
 
