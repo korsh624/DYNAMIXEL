@@ -25,9 +25,11 @@ class Robot(object):
 
     def __init__(self):
         self.motors = {
-            'j1': [1, 'joint'],
-            'j2': [13, 'joint'],
-            'j3': [16, 'joint'],
+            'j1': [2, 'joint'],
+            'j2': [3, 'joint'],
+            'j3': [4, 'joint'],
+            'j4': [5, 'joint'],
+            'j5': [6, 'joint']
         }
 
     def connect(self, dxl_port, ard_port=None):
@@ -98,8 +100,11 @@ class Robot(object):
 
     def init(self):
         self.set_pos({
-            'j1': [-130, 100, 100],
-            'j2': [90, 100, 100],
+            'j1': [0, 100, 100],
+            'j2': [0, 100, 100],
+            'j3': [90, 100, 100],
+            'j4': [0, 100, 100],
+            'j5': [50, 100, 100]
         }, True)
 
     def movet(self):
