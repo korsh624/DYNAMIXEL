@@ -11,6 +11,7 @@ try:
         for el in date_list:
             val=el
             if val[0]=='stop':
+                print('stop')
                 break
 
             r.setJoint('j1',int(val[0]))
