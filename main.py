@@ -8,15 +8,16 @@ try:
     r.init()
     time.sleep(1)
     while True:
-        val=date_list
-        if val[0]=='stop':
-            break
+        for el in date_list:
+            val=el
+            if val[0]=='stop':
+                break
 
-        r.setJoint('j1',int(val[0]))
-        r.setJoint('j2', int(val[1]))
-        r.setJoint('j3',  int(val[2]))
-        r.setJoint('j4', int(val[3]))
-        r.setJoint('j5', int(val[4]))
+            r.setJoint('j1',int(val[0]))
+            r.setJoint('j2', int(val[1]))
+            r.setJoint('j3',  int(val[2]))
+            r.setJoint('j4', int(val[3]))
+            r.setJoint('j5', int(val[4]))
 except:
     raise Exception("Error!")
 r.close()
