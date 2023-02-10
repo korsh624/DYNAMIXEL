@@ -3,7 +3,6 @@ import time
 import pypot.dynamixel
 import serial
 import logging
-
 logger = logging.getLogger(__name__)
 
 
