@@ -24,11 +24,12 @@ class Robot(object):
 
     def __init__(self):
         self.motors = {
-            'j1': [2, 'joint'],
-            'j2': [3, 'joint'],
-            'j3': [4, 'joint'],
-            'j4': [5, 'joint'],
-            'j5': [6, 'joint']
+            'j1': [1, 'joint'],
+            'j2': [2, 'joint'],
+            'j3': [3, 'joint'],
+            'j4': [4, 'joint'],
+            'j5': [5, 'joint'],
+            'j6': [6, 'joint']
         }
 
     def connect(self, dxl_port, ard_port=None):
@@ -40,9 +41,10 @@ class Robot(object):
             self.setup_motor(self.motors[m])
             print("Motor " + m + " configured")
 
-        if not (ard_port is None):
+        if not(ard_port is None):
             print('Connecting to Arduino port ', ard_port)
-            self._ard_io = serial.Serial(ard_port, 1000000)
+            self._ard_io = serial.Serial(ard_port, 1000000) # 9600
+
 
     def setup_motor(self, motor):
         motor_id = motor[0]
@@ -98,26 +100,28 @@ class Robot(object):
     #############################################################################
 
     def init(self):
-        self.set_pos({
-            'j1': [0, 100, 100],
-            'j2': [0, 100, 100],
-            'j3': [90, 100, 100],
-            'j4': [0, 100, 100],
-            'j5': [50, 100, 100]
-        }, True)
+         self.set_pos({
+             'j1': [10, 10, 10],
+             'j2': [0, 100, 100],
+             'j3': [0, 100, 100],
+             'j4': [90, 100, 100],
+             'j5': [0, 100, 100],
+             'j6': [50, 100, 100]
+         }, True)
 
-    def movet(self):
-        self.set_pos({
-            'j1': [90, 100, 100],
-            'j2': [-130, 100, 100],
-        }, True)
-
+    # def movet(self):
+    #     self.set_pos({
+    #         'j1': [90, 100, 100],
+    #         'j2': [-130, 100, 100],
+    #     }, True)
+    #
     def setJoint(self, joint, pos):
-        self.set_pos({
-            joint: [pos, 100, 100]
+         self.set_pos({
+             joint: [pos,50,50]
         }, True)
 
     def stop(self):
-        self.set_speed({"front": 0, "rear": 0, "left": 0, "right": 0})
+         self.set_speed({"front": 0, "rear": 0, "left": 0, "right": 0})
+
 
 
