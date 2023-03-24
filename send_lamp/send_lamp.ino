@@ -1,16 +1,4 @@
-/*
- UDPSendReceiveString:
- This sketch receives UDP message strings, prints them to the serial port
- and sends an "acknowledge" string back to the sender
 
- A Processing sketch is included at the end of file that can be used to send
- and received messages for testing with a computer.
-
- created 21 Aug 2010
- by Michael Margolis
-
- This code is in the public domain.
- */
 
 
 #include <Ethernet.h>
@@ -91,40 +79,42 @@ void loop() {
 
     // send a reply to the IP address and port that sent us the packet we received
 
-    Udp.beginPacket("192.168.42.15", 8888);
+Udp.beginPacket("192.168.42.15", 8888);
     
-   bool btnState = !digitalRead(11);
+ //bool btnState = !digitalRead(11);
  
-  if (btnState && !flag) {  // обработчик нажатия
-   
+  //if (btnState && !flag) {  // обработчик нажатия
+    
     Serial.println("press");
-
-    for (int i = 0; i < 100; ++i){
-    Udp.beginPacket("192.168.42.15", 8888);
-    Udp.write("l:1:0:0:0#"); //red
+    
+    
+    //for (int i = 0; i < 100; ++i){
+      //Udp.beginPacket("192.168.42.15", 8888);
+      Udp.write("l:1:0:0:0#"); //red
+        Udp.endPacket();
+    
     delay(100);
-     Udp.endPacket();
-
- Udp.beginPacket("192.168.42.15", 8888);
+    Udp.beginPacket("192.168.42.15", 8888);
     Udp.write("l:0:1:0:0#");
-     delay(100);
       Udp.endPacket();
-      }
-      
-   flag = true;
-     
-   
-     
-  }
+    delay(100);
+     //Udp.write("l:0:1:0:0#");
+     //delay(2000);
+     //Udp.write("l:0:0:1:0#");
+     //delay(2000);
+     //Udp.write("l:0:0:0:1#");
+     //delay(2000);
+  //}
+ // flag = true;}
   
-  if (!btnState && flag) {  // обработчик отпускания
-    flag = false;  
+ // if (!btnState && flag) {  // обработчик отпускания
+    //flag = false;  
     //Serial.println("release");
-  }
+  //}
     
     //Udp.beginPacket("192.168.42.15", 8888);
-    Udp.write("l:0:0:0:0#");
-    Udp.endPacket();
+   // Udp.write("l:0:0:0:0#");
+  
   
   delay(10);
 }
