@@ -9,9 +9,9 @@ n = 0
 while True:
     r = not r
     n += 1
-    msgFromClient = "r:"+str(int(r))+":0:0:0:2:Hello"+str(n)+"#"
+    msgFromClient = "r:"+str(int(r))+":1:0:0:2:Hello"+str(n)+"#"
     print(msgFromClient)
     bytesToSend = str.encode(msgFromClient)
     bufferSize = 1024
     UDPClientSocket.sendto(bytesToSend, serverAddressPort)
-    time.sleep(0.001)
+    time.sleep(1)
