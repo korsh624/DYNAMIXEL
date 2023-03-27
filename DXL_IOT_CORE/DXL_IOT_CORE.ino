@@ -22,7 +22,7 @@ byte irStatusMemo = 0;
 byte onConveyor = 0;
 
 void sendTerminal(byte r = 0, byte b = 0, byte g = 0, byte y = 0, byte row = 0, String msg = "") {
-  if(r > 1) r = 1; if(g > 1) g = 1; if(b > 1) b = 1; if(y > 1) y = 1; if(row > 3) row = 3;
+  if (r > 1) r = 1; if (g > 1) g = 1; if (b > 1) b = 1; if (y > 1) y = 1; if (row > 3) row = 3;
   String o = "r:" + (String)r + ":" + (String)b + ":" + (String)g + ":" + (String)y + ":" + (String)row + ":" + msg + "#";
   sendUdp(TERMINAL, o);
 }
@@ -34,7 +34,7 @@ void getNewDetail() {
   detailZ -= 7;
   moveManipulator(140, -200, 100, 1);
   moveManipulator(180, 0, 100, 1);
-  moveManipulator(180, 0, 8, 0);  
+  moveManipulator(180, 0, 8, 0);
   moveManipulator(180, 0, 6, 0);
   moveManipulator(180, 0, 100, 0);
 }
@@ -64,12 +64,15 @@ void processUdp() {
           counter++;
           continue;
         }
-        if(packetBuffer[i] != ':' && counter < 2) {
+        if (packetBuffer[i] != ':' && counter < 2) {
           continue;
-        } else {ind = i; break;}
-        if(counter > 2) break;
+        } else {
+          ind = i;
+          break;
+        }
+        if (counter > 2) break;
       }
-      Serial.println("STATUS: "+(String)packetBuffer[ind]);
+      Serial.println("STATUS: " + (String)packetBuffer[ind]);
       manipulatorStatus = packetBuffer[ind] == '0' ? 0 : 1;
       return;
     }
@@ -101,7 +104,9 @@ void moveManipulator(int x, int y, int z, int g) {
   unsigned long timeout = millis() + 5000;
   do {
     processUdp();
-    if (manipulatorStatus == 1) {break;}
+    if (manipulatorStatus == 1) {
+      break;
+    }
     delay(10);
   } while (manipulatorStatus == 1 || millis() < timeout);
   sendUdp(MANIPULATOR, "s#");
@@ -131,7 +136,7 @@ void setup() {
   Serial.println("UDP connection is at: ");
   Serial.println(Ethernet.localIP());
   Serial.println("----------------------");
-  
+
   sendTerminal(1, 0, 1, 0, 0, "COUNT:");
   sendTerminal(1, 0, 1, 0, 1, "0");
   getNewDetail();

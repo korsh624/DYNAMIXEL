@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf66c115-383a-4abf-b3bd-60fd58e666e0" name="Changes" comment="git add .">
-      <change afterPath="$PROJECT_DIR$/ivan/send_to_conveer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functionlamp/functionlamp.ino" beforeDir="false" afterPath="$PROJECT_DIR$/functionlamp/functionlamp.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ivan/send_to_manip.py" beforeDir="false" afterPath="$PROJECT_DIR$/ivan/send_to_manip.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ivan/send_to_reminal.py" beforeDir="false" afterPath="$PROJECT_DIR$/ivan/send_to_reminal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DXL_IOT_CORE/DXL_IOT_CORE.ino" beforeDir="false" afterPath="$PROJECT_DIR$/DXL_IOT_CORE/DXL_IOT_CORE.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UDP_socket1.py" beforeDir="false" afterPath="$PROJECT_DIR$/UDP_socket1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +56,7 @@
       <recent name="C:\Program Files" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.send_to_reminal">
+  <component name="RunManager" selected="Python.UDP_socket1">
     <configuration name="UDP_socket1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DYNAMIXEL" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -188,10 +185,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.UDP_socket1" />
         <item itemvalue="Python.send_to_reminal" />
         <item itemvalue="Python.send_to_conveer" />
         <item itemvalue="Python.send_to_manip" />
-        <item itemvalue="Python.UDP_socket1" />
         <item itemvalue="Python.scratch_4" />
       </list>
     </recent_temporary>
