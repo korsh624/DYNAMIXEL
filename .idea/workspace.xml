@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf66c115-383a-4abf-b3bd-60fd58e666e0" name="Changes" comment="git add .">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DXL_IOT_CORE/DXL_IOT_CORE.ino" beforeDir="false" afterPath="$PROJECT_DIR$/DXL_IOT_CORE/DXL_IOT_CORE.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UDP_socket1.py" beforeDir="false" afterPath="$PROJECT_DIR$/UDP_socket1.py" afterDir="false" />
+    <list default="true" id="bf66c115-383a-4abf-b3bd-60fd58e666e0" name="Changes" comment="Add script and module">
+      <change afterPath="$PROJECT_DIR$/DXL_IOT_FLYSKY/DXL_IOT_FLYSKY.ino" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functionManip/functionManip.ino" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +45,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ivan" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\git\DYNAMIXEL\ivan" />
       <recent name="C:\git\DYNAMIXEL" />
+      <recent name="C:\git\DYNAMIXEL\ivan" />
       <recent name="C:\Program Files" />
     </key>
   </component>
