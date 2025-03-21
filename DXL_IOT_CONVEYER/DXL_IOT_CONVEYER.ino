@@ -9,7 +9,7 @@
 #define DXL_REG 27
 #define UDP_PORT 8888
 
-IPAddress MyIP(192, 168, 42, 15);
+IPAddress MyIP(192, 168, 42, 49);
 
 EthernetUDP udp;
 char packetBuffer[UDP_TX_PACKET_MAX_SIZE];
